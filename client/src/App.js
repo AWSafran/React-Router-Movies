@@ -15,20 +15,9 @@ export default class App extends Component {
 
   addToSavedList = movie => {
     const savedList = this.state.savedList;
-    console.log(movie.id);
-    console.log(this.state.savedList.filter(film => film.id === movie.id))
-
-    if([] === []){
-      console.log("empty = empty");
-    }
-
     if(this.state.savedList.filter(film => film.id === movie.id).length === 0){
       savedList.push(movie);
-      console.log("Logic should have worked");
     }
-
-
- 
     this.setState({ savedList });
   };
 
